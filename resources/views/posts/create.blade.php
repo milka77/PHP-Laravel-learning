@@ -29,6 +29,7 @@
     </div>
 
     {{-- /End Create the input with the new HTML Form addon --}}
+    
   {!! Form::close() !!}
   {{-- </form> --}}
 
