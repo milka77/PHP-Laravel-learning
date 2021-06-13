@@ -25,6 +25,8 @@
     </tbody>
   </table>
 
+  <a href="{{route('posts.create')}}">Create new post</a>
+
 @endsection
 
 
