@@ -385,4 +385,9 @@ Route::get('post/{id}/{name}/{pass}', [PostController::class, 'show_post']);
 |-----------------------------------------
 */
 
-Route::resource('/posts', '\App\Http\Controllers\PostController');
+Route::group(['middleware'=>'web'], function() {
+  
+  Route::resource('/posts', '\App\Http\Controllers\PostController');
+
+
+});
