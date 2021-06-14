@@ -1,11 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+// Model imports
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Country;
 use App\Models\Photo;
 use App\Models\Tag;
+
+// Controller imports
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,13 +52,12 @@ use App\Models\Tag;
 
 // Route::resource('posts', '\App\Http\Controllers\PostController');
 
-use \App\Http\Controllers\PostController;
 
 // Route::get('/contact', '\App\Http\Controllers\PostController@contact');
 Route::get('/contact', [PostController::class, 'contact']);
 
 
-Route::get('post/{id}/{name}/{pass}', '\App\Http\Controllers\PostController@show_post');
+Route::get('post/{id}/{name}/{pass}', [PostController::class, 'show_post']);
 
 
 /*
